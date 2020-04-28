@@ -41,9 +41,12 @@ body {
 
 .header__wrapper {
   position: relative;
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
   padding-top: 5px;
   padding-bottom: 11px;
 }
@@ -71,7 +74,8 @@ body {
   display: block;
   position: absolute;
   top: 60%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: -25px;
 }
 
@@ -113,6 +117,7 @@ body {
 }
 
 .header__buttons {
+  display: -webkit-box;
   display: flex;
   margin-right: -4px;
   margin-top: 55px;
@@ -132,7 +137,8 @@ body {
   display: block;
   position: absolute;
   top: 30%;
-  transform: translateY(-55%);
+  -webkit-transform: translateY(-55%);
+          transform: translateY(-55%);
   right: 3px;
   cursor: pointer;
 }
@@ -194,8 +200,10 @@ body {
   height: 18px;
   width: 26px;
   display: none;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
   cursor: pointer;
 }
 
@@ -213,7 +221,10 @@ body {
   background: #333;
   position: absolute;
   top: -5px;
+  -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
 }
 
 .burger-icon::after {
@@ -223,7 +234,10 @@ body {
   background: #333;
   position: absolute;
   top: 5px;
+  -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
   transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
 }
 
 .burger-icon.active {
@@ -232,14 +246,22 @@ body {
 
 .burger-icon.active::before {
   top: 0;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
 
 .burger-icon.active::after {
   top: 0;
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
   transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
 }
 
 /* ----------------------------- моб меню ----------------------------- */
@@ -251,8 +273,10 @@ body {
   top: 0;
   height: 100vh;
   width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(17.19%, #49494a), to(#383836));
   background: linear-gradient(180deg, #49494a 17.19%, #383836 100%);
   padding-top: 75px;
+  -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
 
@@ -261,8 +285,10 @@ body {
 }
 
 .nav-mobile__item:first-child {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
 }
 
 .nav-mobile__title {
@@ -273,6 +299,7 @@ body {
 }
 
 .nav-mobile__lang {
+  display: -webkit-box;
   display: flex;
 }
 
@@ -316,7 +343,8 @@ body {
   width: 11px;
   right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   position: absolute;
   background: url(../img/header/side_arrow.png) center no-repeat;
 }
@@ -332,7 +360,8 @@ body {
 .slider-top__header {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: 55.25%;
   background: rgba(62, 62, 62, 0.9);
   z-index: 5;
@@ -369,7 +398,8 @@ body {
   z-index: 5;
   margin-top: -38px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .slider .slick-dots li {
@@ -414,9 +444,13 @@ body {
 }
 
 .services-wrapper {
+  display: -webkit-box;
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
+  -webkit-box-align: center;
+          align-items: center;
   position: relative;
   z-index: 5;
 }
@@ -433,7 +467,8 @@ body {
   content: "";
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   bottom: -12px;
   width: 82px;
   height: 2px;
@@ -441,9 +476,13 @@ body {
 }
 
 .services__items {
+  display: -webkit-box;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   margin-top: 33px;
 }
 
@@ -533,7 +572,8 @@ body {
   width: 46px;
   height: 2px;
   background: #e4b56b;
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 .services__button {
@@ -557,9 +597,13 @@ body {
 }
 
 .about-wrapper {
+  display: -webkit-box;
   display: flex;
-  flex-flow: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-flow: column;
+  -webkit-box-align: center;
+          align-items: center;
   padding-top: 40px;
 }
 
@@ -579,11 +623,19 @@ body {
   height: 2px;
   bottom: -2px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #e4b56b;
 }
 
 .about__item {
+  background: -webkit-gradient(
+      linear,
+      left bottom, left top,
+      from(rgba(62, 62, 62, 0.29)),
+      to(rgba(62, 62, 62, 0))
+    ),
+    url(../img/about/about-1.jpg);
   background: linear-gradient(
       0deg,
       rgba(62, 62, 62, 0.29) 0%,
@@ -604,7 +656,8 @@ body {
 .about__descr {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   color: #fff;
   padding: 20px 115px 40px 90px;
   width: 55.15%;
@@ -619,7 +672,8 @@ body {
   right: -44px;
   top: 105px;
   background: #e4b56b;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 
 .about__descr.bottom {
@@ -649,9 +703,13 @@ body {
 /* ------------------------------------ footer ------------------------------------ */
 
 .footer-wrapper {
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-flow: row wrap;
   padding-top: 20px;
 }
 
@@ -701,8 +759,11 @@ body {
   font-size: 16px;
   line-height: 21px;
   color: #aeaeae;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   flex-wrap: wrap;
   max-height: 175px;
   margin-top: 15px;
@@ -740,6 +801,7 @@ body {
 }
 
 .footer-col__item.socials {
+  display: -webkit-box;
   display: flex;
   margin-top: 14px;
 }
@@ -773,7 +835,8 @@ body {
 /* TODO: */
 @media (max-width: 1200px) {
   .services__items {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   .services__unit {
@@ -906,7 +969,8 @@ body {
   }
 
   .footer-wrapper {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 
   .footer-col.left {
@@ -930,7 +994,8 @@ body {
   }
 
   .footer-col__item.socials {
-    justify-content: center;
+    -webkit-box-pack: center;
+            justify-content: center;
   }
 }
 
